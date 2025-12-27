@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Music Hub</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #fef6f6;
+    color: #2b2b2b;
+    padding-bottom: 110px;
+}
+
+.top {
+    background: linear-gradient(90deg, #ffd6d6, #e0f2fe);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top h1 {
+    font-size: 26px;
+}
+
+.top img {
+    height: 42px;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+    padding: 15px 20px;
+    background: #ffffff;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ef4444;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #0284c7;
+}
+
+.container {
+    padding: 40px 400px;
+}
+
+.block {
+    margin-bottom: 30px;
+}
+
+.block h2 {
+    margin-bottom: 12px;
+    color: #0284c7;
+}
+
+.song-card {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: #ffffff;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.song-card:hover {
+    background: #e0f2fe;
+}
+
+.tags span {
+    display: inline-block;
+    background: #ffe4e6;
+    color: #9f1239;
+    padding: 8px 14px;
+    border-radius: 20px;
+    margin: 6px;
+    font-size: 14px;
+}
+
+.tags span:hover {
+    background: #fb7185;
+    color: #fff;
+}
+
+.trending li {
+    background: #ffffff;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 10px;
+}
+.trending li:hover{
+    background:#e0f2fe;
+}
+.trending small {
+    color: #64748b;
+}
+
+.player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+}
+
+.player-info {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    text-decoration: #64748b;
+}
+
+.player-info img {
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+}
+
+.controls {
+    display: flex;
+    gap: 18px;
+    font-size: 22px;
+}
+.controls:hover{
+    color: #64748b;
+}
+.play {
+    width: 42px;
+    height: 42px;
+    background: #0284c7;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.play:hover{
+    color: #ec6c6c;
+}
+</style>
+</head>
+
+<body>
+
+<div class="top">
+    <h1>Music Hub</h1>
+    <img src="LOGO.png">
+</div>
+
+<div class="menu">
+    <a href="#all">All Songs</a>
+    <a href="#liked">Liked</a>
+    <a href="#trending">Trending</a>
+</div>
+
+<div class="container">
+
+    <div class="block" id="all">
+        <h2>All Songs</h2>
+
+        <div class="song-card">
+            <span>Arjunar Villu – Ghilli</span>
+            <span>▶</span>
+        </div>
+        <div class="song-card">
+            <span>Vaathi Coming – Master</span>
+            <span>▶</span>
+        </div>
+        <div class="song-card">
+            <span>Arabic Kuthu – Beast</span>
+            <span>▶</span>
+        </div>
+        <div class="song-card">
+            <span>Jalabulajangu - Don</span>
+            <span>▶</span>
+        </div>
+        <div class="song-card">
+            <span>Ethir Neechal - Ethir Neechal</span>
+            <span>▶</span>
+        </div>
+        <div class="song-card">
+            <span>Udhungada Sangu - VIP</span>
+            <span>▶</span>
+        </div>
+        <div class="song-card">
+            <span>Appadi Podu - Ghilli</span>
+            <span>▶</span>
+        </div>
+    </div>
+
+    <div class="block" id="liked">
+        <h2>Liked Songs</h2>
+        <div class="tags">
+            <span>Aathi – Kathi</span>
+            <span>Vazhithunaiye – Dragon</span>
+            <span>Arjunaru Villu - Ghilli</span>
+            <span>Selfie Pulla – Kathi</span>
+            <span>Manjanathi – Karnan</span>
+        </div>
+    </div>
+
+    <div class="block" id="trending">
+        <h2>Trending Now</h2>
+        <ol class="trending">
+            <li>Monica – Coolie <br><small>Rating: 9.5/10</small></li>
+            <li>Thalapathy Kacheri – Jana Nayagan <br><small>Rating: 9.0/10</small></li>
+            <li>Kannima – Retro <br><small>Rating: 8.6/10</small></li>
+            <li>Mutha Mazhai-Thug life<br>Rating: 8.4/10</li>
+            <li>Salambala-Madharasi<br>Rating: 8.0/10</li>
+        </ol>
+    </div>
+
+</div>
+
+<div class="player">
+    <div class="player-info">
+        <img src="image.png">
+        <div>
+            <strong>Arjunar Villu</strong><br>
+            <small>Manikka Vinayagam</small>
+        </div>
+    </div>
+
+    <div class="controls">
+        ⏮
+        <div class="play">▶</div>
+        ⏭
+    </div>
+</div>
+
+</body>
+</html>
